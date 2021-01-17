@@ -8,7 +8,7 @@ def hot_potato(name_list_in, number_in):
     while True:
         number = number_in
         if circle.size() == 1:
-            break;
+            break
         while number > 0:
             top_name = circle.dequeue()
             circle.enqueue(top_name)
