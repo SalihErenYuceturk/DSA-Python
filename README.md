@@ -35,4 +35,17 @@ Methods:
 - is_empty() - Return true if the deque is empty. Else false.
 - size() - Return the number of items in the deque.
 
-## List
+## Unordered List
+
+Methods:
+- List() - Create and return an empty list.
+- add(item_in) - Add item_in to the list. Assume item_in is not already in the list.
+- remove(item_in) - Remove item_in from the list. Assume item_in is present in the list.
+- search(item_in) - Return true if the item is in the list. Else false.
+- is_empty() - Return true if the list is empty. Else false.
+- size() - Return the number of items in the list.
+- append(item_in) - Add item_in to the front of the list. Assume item_in is not present in the list.
+- index(item_in) - Return the position of item_in in the list. Assume item_in is present in the list.
+- insert(index_in, item_in) - Add item_in to the list at index_in. Assume item_in is not present in the list.
+- pop() - Remove the front item from the list and return that item. Assume the list is not empty.
+- pop(index_in) - Remove and return the item at index_in. Assume the item is in the list.
