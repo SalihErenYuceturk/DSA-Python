@@ -36,6 +36,7 @@ Methods:
 - size() - Return the number of items in the deque.
 
 ## Unordered List
+Collection of related items that have no special order or sequence.
 
 Methods:
 - List() - Create and return an empty list.
@@ -47,5 +48,20 @@ Methods:
 - append(item_in) - Add item_in to the front of the list. Assume item_in is not present in the list.
 - index(item_in) - Return the position of item_in in the list. Assume item_in is present in the list.
 - insert(index_in, item_in) - Add item_in to the list at index_in. Assume item_in is not present in the list.
+- pop() - Remove the front item from the list and return that item. Assume the list is not empty.
+- pop(index_in) - Remove and return the item at index_in. Assume the item is in the list.
+
+## Ordered List
+Collection of related items where each item holds a relative position that is based upon some underlying 
+characteristic. Typically either ascending or descending.
+
+Methods:
+- OrderedList() - Create and return an empty ordered list.
+- add(item_in) - Add item_in to the list. Assume item_in is not already in the list.
+- remove(item_in) - Remove item_in from the list. Assume item_in is present in the list.
+- search(item) - Return true if the item is in the list. Else false.
+- is_empty() - Return true if the list is empty. Else false.
+- size() - Return the number of items in the list.
+- index(item_in) - Return the position of item_in in the list. Assume item_in is present in the list.
 - pop() - Remove the front item from the list and return that item. Assume the list is not empty.
 - pop(index_in) - Remove and return the item at index_in. Assume the item is in the list.
