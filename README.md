@@ -39,7 +39,7 @@ Methods:
 Collection of related items that have no special order or sequence.
 
 Methods:
-- List() - Create and return an empty list.
+- UnorderedList() - Create and return an empty list.
 - add(item_in) - Add item_in to the list. Assume item_in is not already in the list.
 - remove(item_in) - Remove item_in from the list. Assume item_in is present in the list.
 - search(item_in) - Return true if the item is in the list. Else false.
