@@ -80,31 +80,10 @@ class UnorderedList:
     def __init__(self):
         self.head = None
 
-    def is_empty(self):
-        return self.head is None
-
     def add(self, item_in):
         temp = Node(item_in)
         temp.set_next(self.head)
         self.head = temp
-
-    def size(self):
-        current = self.head
-        count = 0
-        while current is not None:
-            count = count + 1
-            current = current.get_next()
-        return count
-
-    def search(self, item_in):
-        current = self.head
-        found = False
-        while current is not None and not found:
-            if current.get_data() == item_in:
-                found = True
-            else:
-                current = current.get_next()
-        return found
 
     def remove(self, item_in):
         current = self.head
@@ -116,8 +95,95 @@ class UnorderedList:
             else:
                 previous = current
                 current = current.get_next()
-
         if previous is None:
             self.head = current.get_next()
         else:
             previous.setNext(current.get_next())
+
+    def search(self, item_in):
+        current = self.head
+        found = False
+        while current is not None and not found:
+            if current.get_data() == item_in:
+                found = True
+            else:
+                current = current.get_next()
+        return found
+
+    def is_empty(self):
+        return self.head is None
+
+    def size(self):
+        current = self.head
+        count = 0
+        while current is not None:
+            count = count + 1
+            current = current.get_next()
+        return count
+
+
+"""
+To Be Added:
+append(item_in) - Add item_in to the front of the list. Assume item_in is not present in the list.
+index(item_in) - Return the position of item_in in the list. Assume item_in is present in the list.
+insert(index_in, item_in) - Add item_in to the list at index_in. Assume item_in is not present in the list.
+pop() - Remove the front item from the list and return that item. Assume the list is not empty.
+pop(index_in) - Remove and return the item at index_in. Assume the item is in the list.
+"""
+
+
+class OrderedList:
+    def __init__(self):
+        self.head = None
+
+    def add(self, item_in):
+        current = self.head
+        previous = None
+        stop = False
+        while current is not None and not stop:
+            if current.get_data() > item_in:
+                stop = True
+            else:
+                previous = current
+                current = current.get_next()
+        temp = Node(item_in)
+        if previous is None:
+            temp.set_next(self.head)
+            self.head = temp
+        else:
+            temp.set_next(current)
+            previous.set_next(temp)
+
+    def search(self, item_in):
+        current = self.head
+        found = False
+        stop = False
+        while current is not None and not found and not stop:
+            if current.get_data() == item_in:
+                found = True
+            else:
+                if current.get_data() > item_in:
+                    stop = True
+                else:
+                    current = current.get_next()
+        return found
+
+    def is_empty(self):
+        return self.head is None
+
+    def size(self):
+        current = self.head
+        count = 0
+        while current is not None:
+            count = count + 1
+            current = current.get_next()
+        return count
+
+
+"""
+To Be Added:
+remove(item_in) - Remove item_in from the list. Assume item_in is present in the list.
+index(item_in) - Return the position of item_in in the list. Assume item_in is present in the list.
+pop() - Remove the front item from the list and return that item. Assume the list is not empty.
+pop(index_in) - Remove and return the item at index_in. Assume the item is in the list.
+"""
