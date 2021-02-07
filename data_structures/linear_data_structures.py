@@ -59,8 +59,26 @@ class Deque:
 
 
 class Node:
-    def __init__(self, init_data):
-        self.data = init_data
+    def __init__(self,initdata):
+        self.data = initdata
+        self.next = None
+
+    def getData(self):
+        return self.data
+
+    def getNext(self):
+        return self.next
+
+    def setData(self,newdata):
+        self.data = newdata
+
+    def setNext(self,newnext):
+        self.next = newnext
+
+
+class Node:
+    def __init__(self, initial_data):
+        self.data = initial_data
         self.next = None
 
     def get_data(self):
@@ -81,109 +99,110 @@ class UnorderedList:
         self.head = None
 
     def add(self, item_in):
-        temp = Node(item_in)
-        temp.set_next(self.head)
-        self.head = temp
+        temporary_node = Node(item_in)
+        temporary_node.set_next(self.head)
+        self.head = temporary_node
 
     def remove(self, item_in):
-        current = self.head
-        previous = None
+        current_item = self.head
+        previous_item = None
         found = False
         while not found:
-            if current.get_data() == item_in:
+            if current_item.get_data() == item_in:
                 found = True
             else:
-                previous = current
-                current = current.get_next()
-        if previous is None:
-            self.head = current.get_next()
+                previous_item = current_item
+                current_item = current_item.get_next()
+        if previous_item is None:
+            self.head = current_item.get_next()
         else:
-            previous.setNext(current.get_next())
+            previous_item.set_next(current_item.get_next())
 
     def search(self, item_in):
-        current = self.head
-        found = False
-        while current is not None and not found:
-            if current.get_data() == item_in:
-                found = True
+        current_item = self.head
+        is_found = False
+        while current_item is not None and not is_found:
+            if current_item.get_data() == item_in:
+                is_found = True
             else:
-                current = current.get_next()
-        return found
+                current_item = current_item.get_next()
+        return is_found
 
     def is_empty(self):
         return self.head is None
 
     def size(self):
-        current = self.head
+        current_item = self.head
         count = 0
-        while current is not None:
+        while current_item is not None:
             count = count + 1
-            current = current.get_next()
+            current_item = current_item.get_next()
         return count
 
+    def append(self, item_in):
+        current_item = self.head
+        temporary_node = Node(item_in)
+        while current_item.get_next() is not None:
+            current_item = current_item.get_next()
+        current_item.set_next(temporary_node)
 
-"""
-To Be Added:
-append(item_in) - Add item_in to the front of the list. Assume item_in is not present in the list.
-index(item_in) - Return the position of item_in in the list. Assume item_in is present in the list.
-insert(index_in, item_in) - Add item_in to the list at index_in. Assume item_in is not present in the list.
-pop() - Remove the front item from the list and return that item. Assume the list is not empty.
-pop(index_in) - Remove and return the item at index_in. Assume the item is in the list.
-"""
+    def index(self, item_in):
+        current_item = self.head
+        index = 0
+        while current_item is not None and current_item.get_data() != item_in:
+            current_item = current_item.get_next()
+            index += 1
+        return index
+
+    def insert(self, index_in, item_in):
+        count = index_in
+        new_item = Node(item_in)
+        current_item = self.head
+        previous_item = None
+        while count != 0:
+            previous_item = current_item
+            current_item = current_item.get_next()
+            count -= 1
+        previous_item.set_next(new_item)
+        new_item.set_next(current_item)
+
+    def pop(self):
+        current_item = self.head
+        previous_item = None
+        if current_item.get_next() is None:
+            self.head = None
+            return current_item.get_data()
+        while current_item.get_next() is not None:
+            previous_item = current_item
+            current_item = current_item.get_next()
+        previous_item.set_next(None)
+        return current_item.get_data()
+
+    # def pop(self, index_in):
+    #     count = index_in
+    #     current_item = self.head
+    #     previous_item = None
+    #     if index_in == 0:
+    #         self.head = current_item.get_next()
+    #         return current_item.get_data()
+    #     while count != 0:
+    #         previous_item = current_item
+    #         current_item = current_item.get_next()
+    #         count -= 1
+    #     previous_item.set_next(current_item.get_next())
+    #     return current_item.get_data()
 
 
-class OrderedList:
-    def __init__(self):
-        self.head = None
 
-    def add(self, item_in):
-        current = self.head
-        previous = None
-        stop = False
-        while current is not None and not stop:
-            if current.get_data() > item_in:
-                stop = True
-            else:
-                previous = current
-                current = current.get_next()
-        temp = Node(item_in)
-        if previous is None:
-            temp.set_next(self.head)
-            self.head = temp
-        else:
-            temp.set_next(current)
-            previous.set_next(temp)
 
-    def search(self, item_in):
-        current = self.head
-        found = False
-        stop = False
-        while current is not None and not found and not stop:
-            if current.get_data() == item_in:
-                found = True
-            else:
-                if current.get_data() > item_in:
-                    stop = True
-                else:
-                    current = current.get_next()
-        return found
 
-    def is_empty(self):
-        return self.head is None
 
-    def size(self):
-        current = self.head
-        count = 0
-        while current is not None:
-            count = count + 1
-            current = current.get_next()
-        return count
 
 
 """
 To Be Added:
 remove(item_in) - Remove item_in from the list. Assume item_in is present in the list.
 index(item_in) - Return the position of item_in in the list. Assume item_in is present in the list.
-pop() - Remove the front item from the list and return that item. Assume the list is not empty.
-pop(index_in) - Remove and return the item at index_in. Assume the item is in the list.
+pop() - Remove the front item_in from the list and return that item_in. Assume the list is not empty.
+pop(index_in) - Remove and return the item_in at index_in. Assume the item_in is in the list.
 """

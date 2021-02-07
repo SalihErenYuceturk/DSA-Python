@@ -1,12 +1,24 @@
-from data_structures.linear_data_structures import Stack
+from data_structures.linear_data_structures import UnorderedList
 
-new_stack = Stack()
 
-print(new_stack.is_empty())
-new_stack.push(10)
-print(new_stack.peek())
-new_stack.push(20)
-print(new_stack.peek())
-print(new_stack.pop())
-print(new_stack.peek())
-print(new_stack.size())
+mylist = UnorderedList()
+
+mylist.add(10)
+mylist.add(20)
+mylist.add(30)
+mylist.add(40)
+mylist.add(50)
+mylist.add(60)
+
+print(mylist.index(40))
+print(mylist.index(50))
+print(mylist.index(60))
+
+mylist.insert(2, 45)
+
+print(mylist.index(40))
+print(mylist.index(45))
+print(mylist.index(50))
+print(mylist.index(60))
+
+print(mylist.pop(0))
