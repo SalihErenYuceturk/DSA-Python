@@ -1,24 +1,20 @@
-from data_structures.linear_data_structures import UnorderedList
+from data_structures.linear_data_structures import OrderedList
 
 
-mylist = UnorderedList()
+mylist = OrderedList()
 
-mylist.add(10)
-mylist.add(20)
-mylist.add(30)
-mylist.add(40)
-mylist.add(50)
-mylist.add(60)
+mylist.add(31)
+mylist.add(77)
+mylist.add(17)
+mylist.add(93)
+mylist.add(26)
+mylist.add(54)
 
-print(mylist.index(40))
-print(mylist.index(50))
-print(mylist.index(60))
+print(mylist.size())
+print(mylist.search(93))
+print(mylist.search(100))
 
-mylist.insert(2, 45)
+mylist.remove(17)
 
-print(mylist.index(40))
-print(mylist.index(45))
-print(mylist.index(50))
-print(mylist.index(60))
-
-print(mylist.pop(0))
+print(mylist.size())
+print(mylist.index(26))

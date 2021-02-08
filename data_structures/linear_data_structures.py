@@ -193,16 +193,99 @@ class UnorderedList:
     #     return current_item.get_data()
 
 
+class OrderedList:
+    def __init__(self):
+        self.head = None
 
+    def add(self, item_in):
+        current_item = self.head
+        previous_item = None
+        stop = False
+        while current_item is not None and not stop:
+            if current_item.get_data() > item_in:
+                stop = True
+            else:
+                previous_item = current_item
+                current_item = current_item.get_next()
 
+        temporary_node = Node(item_in)
+        if previous_item is None:
+            temporary_node.set_next(self.head)
+            self.head = temporary_node
+        else:
+            temporary_node.set_next(current_item)
+            previous_item.set_next(temporary_node)
 
+    def remove(self, item_in):
+        current_item = self.head
+        previous_item = None
+        found = False
+        while not found:
+            if current_item.get_data() == item_in:
+                found = True
+            else:
+                previous_item = current_item
+                current_item = current_item.get_next()
+        if previous_item is None:
+            self.head = current_item.get_next()
+        else:
+            previous_item.set_next(current_item.get_next())
 
+    def search(self, item_in):
+        current_item = self.head
+        is_found = False
+        stop = False
+        while current_item is not None and not is_found and not stop:
+            if current_item.get_data() == item_in:
+                is_found = True
+            else:
+                if current_item.get_data() > item_in:
+                    stop = True
+                else:
+                    current_item = current_item.get_next()
+        return is_found
 
+    def is_empty(self):
+        return self.head is None
 
-"""
-To Be Added:
-remove(item_in) - Remove item_in from the list. Assume item_in is present in the list.
-index(item_in) - Return the position of item_in in the list. Assume item_in is present in the list.
-pop() - Remove the front item_in from the list and return that item_in. Assume the list is not empty.
-pop(index_in) - Remove and return the item_in at index_in. Assume the item_in is in the list.
-"""
+    def size(self):
+        current_item = self.head
+        count = 0
+        while current_item is not None:
+            count = count + 1
+            current_item = current_item.get_next()
+        return count
+
+    def index(self, item_in):
+        current_item = self.head
+        index = 0
+        while current_item is not None and current_item.get_data() != item_in:
+            current_item = current_item.get_next()
+            index += 1
+        return index
+
+    def pop(self):
+        current_item = self.head
+        previous_item = None
+        if current_item.get_next() is None:
+            self.head = None
+            return current_item.get_data()
+        while current_item.get_next() is not None:
+            previous_item = current_item
+            current_item = current_item.get_next()
+        previous_item.set_next(None)
+        return current_item.get_data()
+
+    # def pop(self, index_in):
+    #     count = index_in
+    #     current_item = self.head
+    #     previous_item = None
+    #     if index_in == 0:
+    #         self.head = current_item.get_next()
+    #         return current_item.get_data()
+    #     while count != 0:
+    #         previous_item = current_item
+    #         current_item = current_item.get_next()
+    #         count -= 1
+    #     previous_item.set_next(current_item.get_next())
+    #     return current_item.get_data()
