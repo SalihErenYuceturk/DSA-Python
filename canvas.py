@@ -1,20 +1,12 @@
-from data_structures.linear_data_structures import OrderedList
+
+sum_list = [2, 4, 0, 8, 10]
 
 
-mylist = OrderedList()
+def recursive_sum(list_in):
+    if len(list_in) == 1:
+        return list_in[0]
+    else:
+        return list_in[0] + recursive_sum(list_in[1:])
 
-mylist.add(31)
-mylist.add(77)
-mylist.add(17)
-mylist.add(93)
-mylist.add(26)
-mylist.add(54)
 
-print(mylist.size())
-print(mylist.search(93))
-print(mylist.search(100))
-
-mylist.remove(17)
-
-print(mylist.size())
-print(mylist.index(26))
+print(recursive_sum(sum_list))

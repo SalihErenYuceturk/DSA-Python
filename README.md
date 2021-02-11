@@ -65,3 +65,8 @@ Methods:
 - index(item_in) - Return the position of item_in in the list. Assume item_in is present in the list.
 - pop() - Remove the front item from the list and return that item. Assume the list is not empty.
 - pop(index_in) - Remove and return the item at index_in. Assume the item is in the list.
+
+# The Three Laws Of Recursion
+1. A recursive algorithm must have a base case.
+2. A recursive algorithm must change its state and move toward the base case.
+3. A recursive algorithm must call itself, recursively.
