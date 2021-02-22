@@ -76,6 +76,13 @@ Methods:
 ## Searching
 
 ### Sequential Search
+For each item in the list, compare it to the search item. If they match, return true, else look at the next item. If 
+all items have been checked and there is no match, return false. The time complexity is O(n).
+
+### Binary Search
+Assuming that the list is ordered, check the middle term. If the item is the correct one, return true, else 
+depending on the nature of ordering, eliminate half of the list and check the middle item of that. Time complexity 
+is O(log(n)).
 
 ## Sorting
 
