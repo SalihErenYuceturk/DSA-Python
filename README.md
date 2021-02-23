@@ -84,5 +84,15 @@ Assuming that the list is ordered, check the middle term. If the item is the cor
 depending on the nature of ordering, eliminate half of the list and check the middle item of that. Time complexity 
 is O(log(n)).
 
+### Hashing
+Through the use of hashing, a data structure that can be searched in O(1) can be built. A hash table is used for 
+this. A hash table is a collection of items which are stored in such a way as to make it easy to find them later. 
+Each position has a key and value. Retrieving the value assigned to a key takes only a time complexity of O(1). For 
+this to be done successfully, the correct key and value must be mapped together. This is done through a hash 
+function. 
+
+If two values end up having the same key, this is called a collusion. It is possible to write a function 
+that avoids this if we know the value set beforehand, and that it will not change.
+
 ## Sorting
 
