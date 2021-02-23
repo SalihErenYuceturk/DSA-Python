@@ -96,3 +96,8 @@ that avoids this if we know the value set beforehand, and that it will not chang
 
 ## Sorting
 
+### Bubble Sort
+Compare every item with the one after it. Swap if the item is bigger than the one after it. Go on to the next. Keep 
+scanning the list as such until every item is in the correct order. The time complexity is O(n^2).
+
+### Selection Sort
