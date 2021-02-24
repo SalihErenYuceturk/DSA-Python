@@ -116,6 +116,8 @@ lists using insertion sort. Merge them and sort the final list using insertion s
 complexity of this algorithm is O(n^2), it often performs close to O(n^(3/2)).
 
 ### Merge Sort
-
+A recursive algorithm that continually splits the list in half. If the list is empty or has one item, it is sorted 
+(base case). If the list has multiple items, merge sort is invoked on them. Once both halves are sorted, they are 
+merged. The time complexity is O(n*log(n)).
 
 ### Quick Sort
