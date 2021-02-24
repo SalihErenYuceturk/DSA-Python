@@ -101,3 +101,6 @@ Compare every item with the one after it. Swap if the item is bigger than the on
 scanning the list as such until every item is in the correct order. The time complexity is O(n^2).
 
 ### Selection Sort
+Scan through the list, select the highest value, and swap it with the end of the list. Repeat the process for the 
+list, without the sorted parts with ever iteration. The time complexity is O(n^2), but this algorithm performs 
+better than bubble sort.
