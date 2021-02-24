@@ -104,3 +104,18 @@ scanning the list as such until every item is in the correct order. The time com
 Scan through the list, select the highest value, and swap it with the end of the list. Repeat the process for the 
 list, without the sorted parts with ever iteration. The time complexity is O(n^2), but this algorithm performs 
 better than bubble sort.
+
+### Insertion Sort
+Starting from one side of the list, a sublist of sorted items is made. Each new item is put in the correct position 
+and the sublist grows until the entire list is sorted. The time complexity is O(n^2), but like the last one, it 
+tends to perform better than the prior two.
+
+### Shell Sort
+An optimisation of insertion sort. Break the list into smaller lists of items of a certain increment. Sort these 
+lists using insertion sort. Merge them and sort the final list using insertion sort. Although the worst case time 
+complexity of this algorithm is O(n^2), it often performs close to O(n^(3/2)).
+
+### Merge Sort
+
+
+### Quick Sort
