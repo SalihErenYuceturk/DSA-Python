@@ -106,9 +106,9 @@ list, without the sorted parts with ever iteration. The time complexity is O(n^2
 better than bubble sort.
 
 ### Insertion Sort
-Starting from one side of the list, a sublist of sorted items is made. Each new item is put in the correct position 
+Starting from one side of the list, a sublist of sorted items is made. Each new item is put in the correct position, 
 and the sublist grows until the entire list is sorted. The time complexity is O(n^2), but like the last one, it 
-tends to perform better than the prior two.
+tends  to perform better than the prior two.
 
 ### Shell Sort
 An optimisation of insertion sort. Break the list into smaller lists of items of a certain increment. Sort these 
@@ -121,3 +121,5 @@ A recursive algorithm that continually splits the list in half. If the list is e
 merged. The time complexity is O(n*log(n)).
 
 ### Quick Sort
+Select a pivot item. Put this item in the correct position in the list. Divide the list on the pivot and apply the 
+same algorithm on those lists. The average time complexity is O(n*log(n)).
