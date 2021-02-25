@@ -123,3 +123,6 @@ merged. The time complexity is O(n*log(n)).
 ### Quick Sort
 Select a pivot item. Put this item in the correct position in the list. Divide the list on the pivot and apply the 
 same algorithm on those lists. The average time complexity is O(n*log(n)).
+
+# Trees And Tree Algorithms
+
