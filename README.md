@@ -126,6 +126,14 @@ same algorithm on those lists. The average time complexity is O(n*log(n)).
 
 # Trees And Tree Algorithms
 
-## Binary Trees
+## Binary Heap
+Methods:
+- BinaryHeap() - Create a new, empty binary heap.
+- insert(item_in) - Add a new item to the heap.
+- find_min() - Return the item with the minimum key value.
+- del_min() - Return the item with the minimum key value, removing the item from the heap.
+- is_empty() - Return true if the heap is empty, else false.
+- size() - Return the number of items in the heap.
+- build_heap(list_in) - Build a new heap from a list of keys.
 
-## Parse Trees
+## Search Tree
