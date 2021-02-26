@@ -49,4 +49,5 @@ def evaluate(parse_tree_in):
 
 parse_tree = build_parse_tree("( ( 10 + 5 ) * 3 )")
 print(evaluate(parse_tree))
+parse_tree.preorder()
 # parse_tree.postorder()

@@ -2,7 +2,7 @@ from data_structures.binary_tree_lists import *
 from data_structures.binary_tree_nodes import BinaryTree
 
 """
-Write a function that returns a tree using the list of lists functions that looks like this:
+Write a function that returns a tree_in using the list of lists functions that looks like this:
 
             a
     b               c
