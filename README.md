@@ -126,3 +126,6 @@ same algorithm on those lists. The average time complexity is O(n*log(n)).
 
 # Trees And Tree Algorithms
 
+## Binary Trees
+
+## Parse Trees
