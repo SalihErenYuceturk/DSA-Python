@@ -3,7 +3,7 @@ Write two Python functions to find the minimum number in a list.
 
 1. Compare each number to every other number on the list. O(n^2).
 
-2. Find the minimum value with linear complexity. O(n).
+2. Find the minimum value_in with linear complexity. O(n).
 """
 
 
