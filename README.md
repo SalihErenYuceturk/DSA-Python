@@ -1,8 +1,8 @@
-From the book "Problem Solving with Algorithms and Data Structures using Python". 
+From the book "Problem Solving with Algorithms and Data Structures using Python".
 
-# Linear Data Structures
+# 1 -  Linear Data Structures
 
-## Stack
+## 1.1 - Stack
 Ordered. Last in, first out.
 
 Methods:
@@ -13,7 +13,7 @@ Methods:
 - is_empty() - Return true if the stack is empty. Else false.
 - size() - Return the number of items in the stack. 
 
-## Queue
+## 1.2 - Queue
 Ordered. First in, first out.
 
 Methods:
@@ -23,7 +23,7 @@ Methods:
 - is_empty() - Return true if the queue is empty. Else false.
 - size() - Return the number of items in the queue.
 
-## Deque
+## 1.3 - Deque
 Ordered. Elements can be added to the rear and front. They can also be removed from either side.
 
 Methods:
@@ -35,7 +35,7 @@ Methods:
 - is_empty() - Return true if the deque is empty. Else false.
 - size() - Return the number of items in the deque.
 
-## Unordered List
+## 1.4 - Unordered List
 Collection of related items that have no special order or sequence.
 
 Methods:
@@ -51,9 +51,9 @@ Methods:
 - pop() - Remove the front item from the list and return that item. Assume the list is not empty.
 - pop(index_in) - Remove and return the item at index_in. Assume the item is in the list.
 
-## Ordered List
+## 1.5 - Ordered List
 Collection of related items where each item holds a relative position that is based upon some underlying 
-characteristic. Typically either ascending or descending.
+characteristic. Often either ascending or descending.
 
 Methods:
 - OrderedList() - Create and return an empty ordered list.
@@ -66,7 +66,7 @@ Methods:
 - pop() - Remove the front item from the list and return that item. Assume the list is not empty.
 - pop(index_in) - Remove and return the item at index_in. Assume the item is in the list.
 
-# The Three Laws Of Recursion
+# 2 - The Three Laws Of Recursion
 1. A recursive algorithm must have a base case.
 2. A recursive algorithm must change its state and move toward the base case.
 3. A recursive algorithm must call itself, recursively.

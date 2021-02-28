@@ -1,4 +1,4 @@
-from data_structures.linear_data_structures import Stack
+from data_structures.linear.stack import *
 
 """
 Starting with an empty stack, process the parenthesis strings from left to right. If an element is "(", push it in 

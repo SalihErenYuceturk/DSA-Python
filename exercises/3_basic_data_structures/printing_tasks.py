@@ -1,10 +1,10 @@
-from data_structures.linear_data_structures import Queue
+from data_structures.linear.queue import *
 import random
 
 
 class Printer:
-    def __init__(self, prints_per_minute):
-        self.page_rate = prints_per_minute
+    def __init__(self, prints_per_minute_in):
+        self.page_rate = prints_per_minute_in
         self.current_task = None
         self.time_remaining = 0
 
@@ -26,8 +26,8 @@ class Printer:
 
 
 class Task:
-    def __init__(self, time):
-        self.timestamp = time
+    def __init__(self, time_in):
+        self.timestamp = time_in
         self.pages = random.randrange(1, 21)
 
     def get_stamp(self):
@@ -40,27 +40,21 @@ class Task:
         return current_time - self.timestamp
 
 
-def simulation(number_of_seconds, pages_per_minute):
-
-    lab_printer = Printer(pages_per_minute)
+def simulation(number_of_seconds_in, pages_per_minute_in):
+    lab_printer = Printer(pages_per_minute_in)
     print_queue = Queue()
     waiting_times = []
-
-    for current_second in range(number_of_seconds):
-
+    for current_second in range(number_of_seconds_in):
         if new_print_task():
             task = Task(current_second)
             print_queue.enqueue(task)
-
         if (not lab_printer.busy()) and (not print_queue.is_empty()):
             next_task = print_queue.dequeue()
             waiting_times.append(next_task.wait_time(current_second))
             lab_printer.start_next(next_task)
-
         lab_printer.tick()
-
-    averageWait=sum(waiting_times)/len(waiting_times)
-    print("Average Wait %6.2f secs %3d tasks remaining."%(averageWait,print_queue.size()))
+    averageWait = sum(waiting_times)/len(waiting_times)
+    print("Average Wait %6.2f secs %3d tasks remaining." % (averageWait, print_queue.size()))
 
 
 def new_print_task():

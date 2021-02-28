@@ -1,4 +1,4 @@
-from data_structures.linear_data_structures import Stack
+from data_structures.linear.stack import *
 
 """
 Convert a decimal number to binary using divide by two and a stack. 

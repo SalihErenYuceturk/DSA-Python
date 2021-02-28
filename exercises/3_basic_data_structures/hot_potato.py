@@ -1,4 +1,4 @@
-from data_structures.linear_data_structures import Queue
+from data_structures.linear.queue import *
 
 
 def hot_potato(name_list_in, number_in):

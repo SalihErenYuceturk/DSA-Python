@@ -1,4 +1,4 @@
-from data_structures.binary_search_tree import *
+from data_structures.trees.binary_search_tree import *
 
 
 class AVLTree(BinarySearchTree):

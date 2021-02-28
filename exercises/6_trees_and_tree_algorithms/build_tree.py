@@ -1,5 +1,5 @@
-from data_structures.binary_tree_lists import *
-from data_structures.binary_tree_nodes import BinaryTree
+from data_structures.trees.binary_tree_lists import *
+from data_structures.trees.binary_tree_nodes import BinaryTree
 
 """
 Write a function that returns a tree_in using the list of lists functions that looks like this:

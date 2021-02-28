@@ -1,4 +1,4 @@
-from data_structures.linear_data_structures import Stack
+from data_structures.linear.stack import *
 
 
 def infix_to_postfix(string_in):

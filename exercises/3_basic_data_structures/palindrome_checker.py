@@ -1,4 +1,4 @@
-from data_structures.linear_data_structures import Deque
+from data_structures.linear.deque import *
 
 
 def is_palindrome(string_in):

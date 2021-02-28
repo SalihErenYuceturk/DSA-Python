@@ -1,4 +1,3 @@
-
 def integer_to_string(number_in, base_in):
     convert_string = "0123456789ABCDEF"
     if number_in < base_in:

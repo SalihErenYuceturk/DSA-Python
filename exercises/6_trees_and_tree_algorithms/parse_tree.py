@@ -1,5 +1,5 @@
 from data_structures.linear_data_structures import Stack
-from data_structures.binary_tree_nodes import BinaryTree
+from data_structures.trees.binary_tree_nodes import BinaryTree
 import operator
 
 """
