@@ -1,7 +1,7 @@
 from data_structures.linear.stack import *
 
 """
-Convert a decimal number to binary using divide by two and a stack. 
+Convert a decimal value to binary using divide by two and a stack. 
 """
 
 

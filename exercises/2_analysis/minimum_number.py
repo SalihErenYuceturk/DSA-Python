@@ -1,7 +1,7 @@
 """
-Write two Python functions to find the minimum number in a list.
+Write two Python functions to find the minimum value in a list.
 
-1. Compare each number to every other number on the list. O(n^2).
+1. Compare each value to every other value on the list. O(n^2).
 
 2. Find the minimum value_in with linear complexity. O(n).
 """
