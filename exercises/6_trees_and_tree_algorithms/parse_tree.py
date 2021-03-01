@@ -1,12 +1,12 @@
-from data_structures.linear_data_structures import Stack
+from data_structures.linear.stack import *
 from data_structures.trees.binary_tree_nodes import BinaryTree
 import operator
 
 """
 1. If the current token is a '(', add a new node as the left child of the current node, and descend to the left child.
-2. If the current token is in the list ['+','-','/','*'], set the root value_in of the current node to the operator 
+2. If the current token is in the list ['+','-','/','*'], set the root item_in of the current node to the operator 
 represented by the current token. Add a new node as the right child of the current node and descend to the right child.
-3. If the current token is a value, set the root value_in of the current node to the value and return to the parent.
+3. If the current token is a value, set the root item_in of the current node to the value and return to the parent.
 4. If the current token is a ')', go to the parent of the current node.
 """
 

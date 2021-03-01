@@ -1,8 +1,8 @@
 from data_structures.linear.stack import *
 
 """
-Starting with an empty stack, process the parenthesis strings from left to right. If an element is "(", push it in 
-the stack. If ana element is ")" pop the stack. If at the end the stack is not empty, the brackets are not balanced.
+Starting with an empty stack, process the parenthesis strings from left to right. If an item_in is "(", push it in 
+the stack. If ana item_in is ")" pop the stack. If at the end the stack is not empty, the brackets are not balanced.
 """
 
 
