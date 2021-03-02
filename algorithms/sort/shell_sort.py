@@ -3,7 +3,7 @@ def shell_sort(list_in):
     while sublist_count > 0:
         for start_position in range(sublist_count):
             gap_insertion_sort(list_in, start_position, sublist_count)
-        print("after increments of size", sublist_count, "the list is", list_in)
+        print("after increments of size_in", sublist_count, "the list is", list_in)
         sublist_count = sublist_count // 2
 
 

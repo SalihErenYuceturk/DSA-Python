@@ -10,7 +10,7 @@ Methods:
 - push(item_in) - Add item_in to the top of the stack. 
 - pop() - Remove the top item from the stack and return that item.
 - peek() - Return the top item.
-- is_empty() - Return true if the stack is empty. Else false.
+- is_empty() - Return True if the stack is empty. Else False.
 - size() - Return the number of items in the stack. 
 
 ## 1.2 - Queue
@@ -20,7 +20,7 @@ Methods:
 - Queue() - Create and return an empty queue.
 - enqueue(item_in) - Add item_in to the rear of the queue.
 - dequeue() - Remove the front item from the queue and return that item.
-- is_empty() - Return true if the queue is empty. Else false.
+- is_empty() - Return True if the queue is empty. Else False.
 - size() - Return the number of items in the queue.
 
 ## 1.3 - Deque
@@ -32,7 +32,7 @@ Methods:
 - add_rear(item_in) - Add item_in to the rear of the deque.
 - remove_front() - Remove the front item from the deque and return that item.
 - remove_rear() - Remove the rear item from the deque and return that item.
-- is_empty() - Return true if the deque is empty. Else false.
+- is_empty() - Return True if the deque is empty. Else False.
 - size() - Return the number of items in the deque.
 
 ## 1.4 - Unordered List
@@ -42,8 +42,8 @@ Methods:
 - UnorderedList() - Create and return an empty list.
 - add(item_in) - Add item_in to the list. Assume item_in is not already in the list.
 - remove(item_in) - Remove item_in from the list. Assume item_in is present in the list.
-- search(item_in) - Return true if the item is in the list. Else false.
-- is_empty() - Return true if the list is empty. Else false.
+- search(item_in) - Return True if the item is in the list. Else False.
+- is_empty() - Return True if the list is empty. Else False.
 - size() - Return the number of items in the list.
 - append(item_in) - Add item_in to the front of the list. Assume item_in is not present in the list.
 - index(item_in) - Return the position of item_in. Assume item_in is present in the list.
@@ -59,8 +59,8 @@ Methods:
 - OrderedList() - Create and return an empty ordered list.
 - add(item_in) - Add item_in to the list. Assume item_in is not already in the list.
 - remove(item_in) - Remove item_in from the list. Assume item_in is present in the list.
-- search(item) - Return true if the item is in the list. Else false.
-- is_empty() - Return true if the list is empty. Else false.
+- search(item) - Return True if the item is in the list. Else False.
+- is_empty() - Return True if the list is empty. Else False.
 - size() - Return the number of items in the list.
 - index(item_in) - Return the position of item_in in the list. Assume item_in is present in the list.
 - pop() - Remove the front item from the list and return that item. Assume the list is not empty.
@@ -76,23 +76,32 @@ Methods:
 ## 3.1 - Searching Algorithms
 
 ### 3.1.1 - Sequential Search
-For each item in the list, compare it to the search item. If they match, return true, else look at the next item. If 
-all items have been checked and there is no match, return false. The time complexity is O(n).
+For each item in the list, compare it to the search item. If they match, return True, else look at the next item. If 
+all items have been checked and there is no match, return False. The time complexity is O(n).
 
 ### 3.1.2 - Binary Search
-Assuming that the list is ordered, check the middle term. If the item is the correct one, return true, else 
+Assuming that the list is ordered, check the middle term. If the item is the correct one, return True, else 
 depending on the nature of ordering, eliminate half of the list and check the middle item of that. Time complexity 
 is O(log(n)).
 
 ### 3.1.3 - Hashing
-Through the use of hashing, a data structure that can be searched in O(1) can be built. A hash table is used for 
-this. A hash table is a collection of items which are stored in such a way as to make it easy to find them later. 
-Each position has a key and value. Retrieving the value assigned to a key takes only a time complexity of O(1). For 
-this to be done successfully, the correct key and value must be mapped together. This is done through a hash 
-function. 
+Hashing is the process of converting a given key into a value. Through hashing, a data structure that can be 
+searched in O(1) can be built. A hash table need to be created for this. A hash table is a collection of items which 
+are stored in such a way as to make it easy to find them later. Each position has a key and value. Retrieving the 
+value assigned to a key takes only a time complexity of O(1). For this to be done successfully the correct key and 
+value must be mapped together. This is done through a hash function. 
 
-If two values end up having the same key, this is called a collusion. It is possible to write a function 
-that avoids this if we know the value set beforehand, and that it will not change.
+If two values end up having the same key, this is called a collusion. It is possible to write a function that avoids 
+this if we know the value set beforehand, and that it will not change.
+
+Methods:
+- Map(size_in) - Create a new empty map with a given size. Returns an empty map collection.
+- put(key_in, value_in) - Add a new key-value pair to the map. If the key is already in the map replace the old 
+  value with the new value.
+- get(key_in) - Given a key, return the value stored in the map or None otherwise.
+- del - Delete the key-value pair from the map using a statement of the form del map[key].
+- len() - Return the number of key-value pairs stored in the map.
+- in - Return True for a statement of the form key in map, if the given key is in the map, else False.
 
 ## 3.2 - Sorting Algorithms
 
@@ -132,7 +141,7 @@ Methods:
 - insert(item_in) - Add a new item to the heap.
 - find_min() - Return the item with the minimum key value.
 - del_min() - Return the item with the minimum key value, removing the item from the heap.
-- is_empty() - Return true if the heap is empty, else false.
+- is_empty() - Return True if the heap is empty, else False.
 - size() - Return the number of items in the heap.
 - build_heap(list_in) - Build a new heap from a list of keys.
 
